@@ -40,8 +40,8 @@ xmlns="http://www.w3.org/2000/svg">
 form.addEventListener('submit', e => {
   e.preventDefault();
 
-  const delaySec = Number(form.delay.value);
-  const delayMs = delaySec * 1000;
+  const delayMs = Number(form.delay.value);
+
   const state = form.state.value;
 
   const promise = new Promise((resolve, reject) => {
