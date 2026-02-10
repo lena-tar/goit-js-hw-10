@@ -95,63 +95,46 @@ form.form button[type='submit']:hover {
   background-color: #6c8cff;
 }
 
-.iziToast-wrapper {
-  width: auto;
-}
-
 .iziToast-wrapper-topRight {
-  right: 20px;
-  left: auto;
   top: 20px;
+  right: 20px;
 }
 
 .iziToast.toast {
-  width: 383px;
+  padding-left: 22px;
+  height: 64px;
   min-height: 64px;
-  padding: 0;
   border-radius: 4px;
-  display: flex;
-  align-items: center;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  box-shadow: none;
 }
 
-.iziToast.toast .iziToast-body {
+.iziToast.toast > .iziToast-body {
+  padding: 20px;
   display: flex;
   align-items: center;
-  padding: 20px 44px 20px 20px;
-  margin: 0;
+  gap: 12px;
   width: 100%;
-}
-
-.iziToast.toast .iziToast-icon {
-  width: 18px;
-  height: 18px;
-  margin-right: 12px;
-}
-
-.iziToast.toast .iziToast-message {
-  font-size: 15px;
-  font-weight: 500;
-  color: #ffffff;
-  line-height: 1.2;
-}
-
-.iziToast.toast--success {
-  background-color: #59a10d;
-  border-bottom: 2px solid #b5ea7c;
-}
-
-.iziToast.toast--error {
-  background-color: #ef4040;
-  border-bottom: 2px solid #ff9a9a;
+  height: 100%;
+  margin: 0;
 }
 
 .iziToast.toast .iziToast-title {
   display: none;
 }
 
-.iziToast.toast .iziToast-close {
-  opacity: 1;
+.iziToast.toast .iziToast-message {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.iziToast.toast .iziToast-icon {
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .iziToast.toast .iziToast-progressbar {
@@ -160,5 +143,22 @@ form.form button[type='submit']:hover {
 
 .iziToast.toast .iziToast-progressbar > div {
   height: 2px;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(20, 15, 15, 0.6);
+}
+
+.iziToast.toast.toast--success {
+  width: 383px;
+  background-color: #59a10d;
+  border-bottom: 2px solid #b5ea7c;
+}
+
+.iziToast.toast.toast--error {
+  width: 322px;
+  background-color: #ef4040;
+  border-bottom: 2px solid #ffbebe;
+}
+
+.iziToast.toast.toast--success .iziToast-message,
+.iziToast.toast.toast--error .iziToast-message {
+  color: #ffffff;
 }
